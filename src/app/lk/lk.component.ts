@@ -1,9 +1,11 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-lk',
   templateUrl: './lk.component.html',
   styleUrls: ['./lk.component.scss']
 })
-export class LkComponent {
+export class LkComponent implements OnInit {
+  ngOnInit(): void {
+  }
 }
