@@ -1,0 +1,13 @@
+<div class="dashboards-list">
+    <div class="dashboard" (click)="addDashboard()">
+        <div>
+            <i class="material-icons">add</i>
+        </div>
+    </div>
+    <div class="dashboard" *ngFor="let dashboard of dashboards">
+        <div>
+            <p>ChannelName</p>
+            <p>123 followers</p>
+        </div>
+    </div>
+</div>

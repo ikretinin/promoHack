@@ -16,6 +16,6 @@ export class LoginComponent {
 
   enter() {
     localStorage.setItem('currentUser', `${JSON.stringify({login: this.login})}`);
-    this.router.navigate(['/lk']);
+    this.router.navigate(['/dashboards']);
   }
 }
