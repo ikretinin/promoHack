@@ -8,13 +8,16 @@ import {MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, MatS
 import {AuthGuard} from './guards/auth.guard';
 import {LoginComponent} from './login/login.component';
 import {FormsModule} from '@angular/forms';
-import {LkComponent} from './lk/lk.component';
+import {VideoInfoComponent} from './lk/video-info.component';
+import {ChartsModule} from 'ng2-charts';
+import {StatChartComponent} from './stat-chart/stat-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    LkComponent
+    VideoInfoComponent,
+    StatChartComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import {LkComponent} from './lk/lk.component';
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [
     AuthGuard
