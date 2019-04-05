@@ -1,0 +1,10 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'theme.scss';
+
+body {
+  margin: 0;
+}
+
+/deep/ .mat-toolbar.mat-primary {
+  background: #000 !important;
+}
