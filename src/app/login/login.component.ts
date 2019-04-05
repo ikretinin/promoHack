@@ -18,4 +18,8 @@ export class LoginComponent {
     localStorage.setItem('currentUser', `${JSON.stringify({login: this.login})}`);
     this.router.navigate(['/dashboards']);
   }
+
+  isLogined() {
+    return localStorage.getItem('currentUser');
+  }
 }
