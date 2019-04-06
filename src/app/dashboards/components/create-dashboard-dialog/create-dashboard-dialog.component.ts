@@ -24,5 +24,9 @@ export class CreateDashboardDialogComponent implements OnInit {
       isCommentsMood: null
     };
   }
+
+  applyFilters(event) {
+    console.log(event);
+  }
 }
 

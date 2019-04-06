@@ -6,7 +6,7 @@
         </mat-form-field>
         <div>
             Период обработки
-            <mat-slider thumbLabel [(ngModel)]="dashboard.processingTime" [displayWith]="formatLabel" min="1" max="30" name="processingTime"></mat-slider>
+            <mat-slider thumbLabel [(ngModel)]="dashboard.processingTime" min="1" max="30" name="processingTime"></mat-slider>
             {{dashboard.processingTime}} дней
         </div>
         <div>
@@ -22,5 +22,5 @@
 </div>
 <div mat-dialog-actions style="float: right;">
     <button mat-button mat-dialog-close>Отмена</button>
-    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Сохранить</button>
+    <button mat-button [mat-dialog-close]="dashboard" cdkFocusInitial>Сохранить</button>
 </div>
