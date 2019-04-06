@@ -16,17 +16,14 @@ export class CreateDashboardDialogComponent implements OnInit {
   ngOnInit() {
     this.dashboard = {
       link: null,
-      processingTime: null,
-      updatePeriod: null,
+      processingTime: 1,
+      updatePeriod: 1,
       isLikes: null,
       isViews: null,
       isComments: null,
       isCommentsMood: null,
       userId: null
     };
-  }
-
-  applyFilters(event) {
   }
 }
 

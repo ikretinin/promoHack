@@ -56,13 +56,13 @@ export class LoginComponent implements OnInit {
   }
 
   getQueryParams(locationSearch: string): any {
-    let params = {};
+    const params = {};
     if (locationSearch) {
       locationSearch = locationSearch.split('#')[1];
-      let splited = locationSearch.split('&');
+      const splited = locationSearch.split('&');
       for (let i = 0; i < splited.length; i++) {
-        let propName = splited[i].split('=')[0];
-        let propValue = splited[i].split('=')[1];
+        const propName = splited[i].split('=')[0];
+        const propValue = splited[i].split('=')[1];
         params[propName] = propValue;
       }
     }

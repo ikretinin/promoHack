@@ -34,3 +34,37 @@ i {
     }
 }
 
+.count {
+  color: grey;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.mat-icon {
+  margin-right: 4px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+}
+
