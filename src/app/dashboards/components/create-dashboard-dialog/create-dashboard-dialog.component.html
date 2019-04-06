@@ -12,7 +12,7 @@
         <div>
             Частота обновления
             <mat-slider thumbLabel [(ngModel)]="dashboard.updatePeriod" min="1" max="24" name="updatePeriod"></mat-slider>
-            часов
+            {{dashboard.updatePeriod}} часов
         </div>
         <mat-checkbox [(ngModel)]="dashboard.isLikes" name="isLikes">Количество лайков</mat-checkbox>
         <mat-checkbox [(ngModel)]="dashboard.isViews" name="isViews">Количество просмотров</mat-checkbox>
