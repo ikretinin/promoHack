@@ -13,6 +13,7 @@ import {ChannelDasboardModel} from './models/channel.model';
 export class DashboardsComponent implements OnInit {
 
   channels: ChannelDasboardModel[];
+  userId = localStorage.getItem('currentUser');
 
   constructor(
     public dialog: MatDialog,
@@ -38,6 +39,6 @@ export class DashboardsComponent implements OnInit {
   }
 
   getChannels() {
-    this.service.getChannels().subscribe(m => this.channels = m);
+    this.service.getChannels(this.userId).subscribe(m => this.channels = m);
   }
 }
