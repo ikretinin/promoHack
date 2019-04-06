@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: '', redirectTo: 'channels', pathMatch: 'full'},
   {path: 'channels', component: DashboardsComponent, canActivate: [AuthGuard]},
-  {path: 'lk', component: VideoInfoComponent, canActivate: [AuthGuard]},
+  {path: 'video/:id', component: VideoInfoComponent, canActivate: [AuthGuard]},
   {path: 'channels/:id', component: VideosComponent, canActivate: [AuthGuard]}
 ];
 

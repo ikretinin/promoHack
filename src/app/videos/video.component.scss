@@ -1,11 +1,11 @@
 .card {
-  margin: 20px;
+  margin: 10px;
   cursor: pointer;
   transition: box-shadow 200ms ease-in-out;
 }
 
 img {
-  max-width: 360px;
+  max-width: 309px;
   max-height: 640px;
 }
 
@@ -42,8 +42,31 @@ img {
 
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 48px;
-  font-weight: 600;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.header-info {
+  margin: 15px;
+}
+
+.thumbnail-image {
+  height: 120px;
+  width: 120px;
+}
+
+.thumbnail-image:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.channel-name {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.channel-followers {
+  color: grey;
+  margin: 5px 0;
 }

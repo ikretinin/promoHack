@@ -1,9 +1,13 @@
-<div>
-  <mat-card class="header">
-    {{channelTitle}}
-  </mat-card>
-</div>
-<div class="content" *ngIf="!(isChart$ | async)">
+<mat-card class="header">
+  <a href="https://www.youtube.com/watch?v=erLk59H86ww">
+    <img class="thumbnail-image" src="http://i3.ytimg.com/vi/erLk59H86ww/maxresdefault.jpg">
+  </a>
+  <div class="header-info">
+    <p class="channel-name">Star Wars Channel</p>
+    <div class="channel-followers">24 363 672 followers</div>
+  </div>
+</mat-card>
+<div class="content">
   <mat-card class="card" *ngFor="let video of videos" (click)="openChartByVideo(video.id)">
     <img mat-card-image src="{{video.thumbnail}}" alt="Photo">
     <mat-card-content class="description">
@@ -13,4 +17,3 @@
     </mat-card-content>
   </mat-card>
 </div>
-<app-video-info *ngIf="isChart$ | async"></app-video-info>

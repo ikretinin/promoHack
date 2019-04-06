@@ -90,15 +90,10 @@ export class VideosComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.isChart$ = this.route.queryParamMap.pipe(map(param => !!param.get('videoId')));
   }
 
   openChartByVideo(id: string) {
-    this.router.navigate([this.router.url], {
-      queryParams: {
-        videoId: id
-      }
-    });
+    this.router.navigate(['/video', id])
   }
 
 }

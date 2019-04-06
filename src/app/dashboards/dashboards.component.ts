@@ -24,6 +24,7 @@ export class DashboardsComponent implements OnInit {
   addDashboard() {
     console.log('Add');
     const dialogRef = this.dialog.open(CreateDashboardDialogComponent, {
+      width: '420px'
     });
     
     dialogRef.afterClosed().subscribe(result => {
