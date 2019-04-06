@@ -13,7 +13,7 @@ export class YoutubeService {
   ) {}
 
   createTaskForChannel(channel: CreateDashboardModel): Observable<any> {
-    return this.http.post<any>(`${environment.API_ENDPOINT}/createTaskForChannel`, channel);
+    return this.http.post<any>(`${environment.API_ENDPOINT}/createChannel`, channel);
   }
 
   getChannels(): Observable<ChannelDasboardModel[]> {
