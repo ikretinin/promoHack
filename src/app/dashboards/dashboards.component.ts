@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { CreateDashboardDialogComponent } from './components/create-dashboard-dialog/create-dashboard-dialog.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-dashboards',
@@ -11,7 +12,9 @@ export class DashboardsComponent implements OnInit {
 
   dashboards = [1,2,3,4,5];
 
-  constructor(public dialog: MatDialog) {
+  constructor(
+    public dialog: MatDialog,
+    private router: Router) {
   }
 
   ngOnInit() {
@@ -27,5 +30,9 @@ export class DashboardsComponent implements OnInit {
       console.log('The dialog was closed');
       var data = result;
     });
+  }
+
+  toVideo() {
+    this.router.navigate(['/lk']);
   }
 }
