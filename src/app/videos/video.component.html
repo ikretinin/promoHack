@@ -1,3 +1,8 @@
+<div>
+  <mat-card class="header">
+    {{channelTitle}}
+  </mat-card>
+</div>
 <div class="content" *ngIf="!(isChart$ | async)">
   <mat-card class="card" *ngFor="let video of videos" (click)="openChartByVideo(video.id)">
     <img mat-card-image src="{{video.thumbnail}}" alt="Photo">

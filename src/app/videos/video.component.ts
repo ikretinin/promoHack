@@ -11,6 +11,7 @@ import {map, subscribeOn} from 'rxjs/operators';
 })
 export class VideosComponent implements OnInit {
 
+  channelTitle = 'Title 1';
   videos: VideoDashboardModel[] = [
     {
       id: '123',
