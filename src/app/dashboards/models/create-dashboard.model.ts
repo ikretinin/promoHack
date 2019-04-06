@@ -1,4 +1,5 @@
 export interface CreateDashboardModel {
+    userId: number;
     link: string;
     processingTime: number;
     updatePeriod: number;
