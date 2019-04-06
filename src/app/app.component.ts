@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   exit() {
-    localStorage.removeItem('currentUser');
+    localStorage.clear();
     this.router.navigate(['/login']);
   }
 

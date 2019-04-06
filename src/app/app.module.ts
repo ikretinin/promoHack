@@ -4,7 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSidenavModule, MatToolbarModule, MatDialogModule, MatSliderModule, MatFormFieldControl, MatCheckboxModule, MatSlideToggleModule, MatCardModule} from '@angular/material';
+import {MatButtonModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatDialogModule,
+        MatSliderModule,
+        MatCheckboxModule,
+        MatSlideToggleModule,
+        MatCardModule
+} from '@angular/material';
 import {AuthGuard} from './guards/auth.guard';
 import {LoginComponent} from './login/login.component';
 import {FormsModule} from '@angular/forms';
@@ -14,6 +25,8 @@ import {VideoInfoComponent} from './video-info/video-info.component';
 import {ChartsModule} from 'ng2-charts';
 import {StatChartComponent} from './stat-chart/stat-chart.component';
 import {VideosComponent} from './videos/video.component';
+import { HttpClientModule} from '@angular/common/http';
+import {YoutubeService} from './services/youtube.service';
 
 @NgModule({
   declarations: [
@@ -41,10 +54,12 @@ import {VideosComponent} from './videos/video.component';
     MatCheckboxModule,
     MatSlideToggleModule,
     ChartsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [
-    AuthGuard
+    AuthGuard,
+    YoutubeService
   ],
   entryComponents: [
     CreateDashboardDialogComponent

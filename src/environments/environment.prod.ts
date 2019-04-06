@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  API_ENDPOINT: '84.201.138.180'
 };
