@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {HttpClient} from "@angular/common/http";
+import {YoutubeService} from "../services/youtube.service";
+import {any} from "codelyzer/util/function";
 
 @Component({
   selector: 'app-login',
@@ -15,9 +17,11 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private http: HttpClient
+    private http: HttpClient,
+    private service: YoutubeService
   ) {
   }
+  
 
   enter() {
     localStorage.setItem('currentUser', `${JSON.stringify({login: this.login})}`);
@@ -42,10 +46,9 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('currentUser', `${m['id']}`);
             localStorage.setItem('accessToken', `${this.accessToken}`);
             localStorage.setItem('userName', `${m['name']}`);
-            this.router.navigate(['/channels'], {replaceUrl: true});
+            this.service.updateUser({...m, accessToken: this.accessToken}).subscribe(u => {this.router.navigate(['/channels'], {replaceUrl: true});});
           });
-      }
-    });
+  }});
   }
 
   getQueryParams(locationSearch: string): any {

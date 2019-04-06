@@ -13,14 +13,18 @@ export class YoutubeService {
   ) {}
 
   createTaskForChannel(channel: CreateDashboardModel): Observable<any> {
-    return this.http.post<any>(`${environment.API_ENDPOINT}/api/createTaskForChannel`, JSON.stringify(channel));
+    return this.http.post<any>(`${environment.API_ENDPOINT}/createTaskForChannel`, JSON.stringify(channel));
   }
 
   getChannels(): Observable<ChannelDasboardModel[]> {
-    return this.http.get<ChannelDasboardModel[]>(`${environment.API_ENDPOINT}/api/getChannels`);
+    return this.http.get<ChannelDasboardModel[]>(`${environment.API_ENDPOINT}/getChannels`);
   }
 
   getVideosByChannelId(channelId: string): Observable<VideoDashboardModel[]> {
-    return this.http.get<VideoDashboardModel[]>(`${environment.API_ENDPOINT}/api/getVideosByChannelId?id=${channelId}`);
+    return this.http.get<VideoDashboardModel[]>(`${environment.API_ENDPOINT}/getVideosByChannelId?id=${channelId}`);
+  }
+
+  updateUser(user: any): Observable<any> {
+    return this.http.post<any>(`${environment.API_ENDPOINT}/updateUser`, JSON.stringify(user));
   }
 }

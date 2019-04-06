@@ -26,6 +26,7 @@ import {ChartsModule} from 'ng2-charts';
 import {StatChartComponent} from './stat-chart/stat-chart.component';
 import {VideosComponent} from './videos/video.component';
 import { HttpClientModule} from '@angular/common/http';
+import {YoutubeService} from './services/youtube.service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { HttpClientModule} from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    AuthGuard
+    AuthGuard,
+    YoutubeService
   ],
   entryComponents: [
     CreateDashboardDialogComponent

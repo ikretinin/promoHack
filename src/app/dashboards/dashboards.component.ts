@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { CreateDashboardDialogComponent } from './components/create-dashboard-dialog/create-dashboard-dialog.component';
 import {Router} from '@angular/router';
+import {YoutubeService} from "../services/youtube.service";
 
 @Component({
   selector: 'app-dashboards',
@@ -14,11 +15,12 @@ export class DashboardsComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    private router: Router) {
+    private router: Router,
+    private service: YoutubeService) {
   }
 
   ngOnInit() {
-
+    this.service.getChannels().subscribe(m => console.log(m));
   }
 
   addDashboard() {
