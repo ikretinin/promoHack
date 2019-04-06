@@ -14,6 +14,7 @@ import {VideoInfoComponent} from './video-info/video-info.component';
 import {ChartsModule} from 'ng2-charts';
 import {StatChartComponent} from './stat-chart/stat-chart.component';
 import {VideosComponent} from './videos/video.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {VideosComponent} from './videos/video.component';
     MatCheckboxModule,
     MatSlideToggleModule,
     ChartsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [
     AuthGuard
