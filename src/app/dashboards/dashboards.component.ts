@@ -30,7 +30,7 @@ export class DashboardsComponent implements OnInit {
       width: '420px'
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.service.createChannel({ ...result, userId: +localStorage.getItem('currentUser')}).subscribe(() => this.getChannels());
+      this.service.createChannel({ ...result, userId: localStorage.getItem('currentUser')}).subscribe(() => this.getChannels());
     });
   }
 
