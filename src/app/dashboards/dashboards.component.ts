@@ -32,7 +32,7 @@ export class DashboardsComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       console.log(result);
-      this.service.createTaskForChannel({userId: +localStorage.getItem('currentUser'), ...result}).subscribe();
+      this.service.createChannel({userId: +localStorage.getItem('currentUser'), ...result}).subscribe();
 
     });
   }
