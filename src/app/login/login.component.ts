@@ -16,7 +16,7 @@ export class LoginComponent {
 
   enter() {
     localStorage.setItem('currentUser', `${JSON.stringify({login: this.login})}`);
-    this.router.navigate(['/dashboards']);
+    this.router.navigate(['/channels'], {replaceUrl: true});
   }
 
   isLogined() {

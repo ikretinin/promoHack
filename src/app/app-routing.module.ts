@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './login/login.component';
-import {VideoInfoComponent} from './lk/video-info.component';
+import {VideoInfoComponent} from './video-info/video-info.component';
 import {AuthGuard} from './guards/auth.guard';
 import { DashboardsComponent } from './dashboards/dashboards.component';
 import {VideosComponent} from './videos/video.component';
