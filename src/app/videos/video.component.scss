@@ -5,9 +5,6 @@
   width: 277px;
 }
 
-img {
-}
-
 .content {
   display: flex;
   flex-direction: row;
@@ -68,4 +65,10 @@ img {
 .channel-followers {
   color: grey;
   margin: 5px 0;
+}
+
+@media (max-width: 500px) {
+  .card {
+      width: 100%;
+  }
 }
