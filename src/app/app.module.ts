@@ -13,6 +13,7 @@ import { CreateDashboardDialogComponent } from './dashboards/components/create-d
 import {VideoInfoComponent} from './lk/video-info.component';
 import {ChartsModule} from 'ng2-charts';
 import {StatChartComponent} from './stat-chart/stat-chart.component';
+import {VideosComponent} from './videos/video.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {StatChartComponent} from './stat-chart/stat-chart.component';
     DashboardsComponent,
     CreateDashboardDialogComponent,
     VideoInfoComponent,
-    StatChartComponent
+    StatChartComponent,
+    VideosComponent
   ],
   imports: [
     BrowserModule,

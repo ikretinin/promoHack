@@ -32,7 +32,7 @@ export class DashboardsComponent implements OnInit {
     });
   }
 
-  toVideo() {
-    this.router.navigate(['/lk']);
+  toVideo(id: string) {
+    this.router.navigate(['/channels', id]);
   }
 }

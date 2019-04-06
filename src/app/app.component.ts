@@ -26,6 +26,6 @@ export class AppComponent {
   }
 
   isDashboards() {
-    return this.router.url === '/dashboards';
+    return this.router.url === '/channels';
   }
 }

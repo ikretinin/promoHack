@@ -4,12 +4,14 @@ import {LoginComponent} from './login/login.component';
 import {VideoInfoComponent} from './lk/video-info.component';
 import {AuthGuard} from './guards/auth.guard';
 import { DashboardsComponent } from './dashboards/dashboards.component';
+import {VideosComponent} from './videos/video.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: '', redirectTo: 'lk', pathMatch: 'full'},
-  {path: 'dashboards', component: DashboardsComponent, canActivate: [AuthGuard]},
-  {path: 'lk', component: VideoInfoComponent, canActivate: [AuthGuard]}
+  {path: '', redirectTo: 'channels', pathMatch: 'full'},
+  {path: 'channels', component: DashboardsComponent, canActivate: [AuthGuard]},
+  {path: 'lk', component: VideoInfoComponent, canActivate: [AuthGuard]},
+  {path: 'channels/:id', component: VideosComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
