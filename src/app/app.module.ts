@@ -4,7 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSidenavModule, MatToolbarModule, MatDialogModule, MatSliderModule, MatFormFieldControl, MatCheckboxModule, MatSlideToggleModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatDialogModule,
+  MatSliderModule,
+  MatFormFieldControl,
+  MatCheckboxModule,
+  MatSlideToggleModule,
+  MatCardModule
+} from '@angular/material';
 import {AuthGuard} from './guards/auth.guard';
 import {LoginComponent} from './login/login.component';
 import {FormsModule} from '@angular/forms';
@@ -40,7 +53,8 @@ import {VideosComponent} from './videos/video.component';
     MatSliderModule,
     MatCheckboxModule,
     MatSlideToggleModule,
-    ChartsModule
+    ChartsModule,
+    MatCardModule
   ],
   providers: [
     AuthGuard
