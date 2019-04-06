@@ -14,18 +14,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    --opacity: 0.3;
     cursor: pointer;
-    --background: url(http://i3.ytimg.com/vi/erLk59H86ww/maxresdefault.jpg) 100%;
-    --background: rgba(0, 0, 0, 0.2) 100%;
-    --background-image:url(http://i3.ytimg.com/vi/erLk59H86ww/maxresdefault.jpg); 
-    --background-size: cover;
-
-  transition: box-shadow 200ms ease-in-out;
-
+    transition: box-shadow 200ms ease-in-out;
 }
-
-
 
 i {
     font-size: 50px;
