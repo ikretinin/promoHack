@@ -11,7 +11,6 @@ import {map, subscribeOn} from 'rxjs/operators';
 })
 export class VideosComponent implements OnInit {
 
-  channelTitle = 'Title 1';
   videos: VideoDashboardModel[] = [
     {
       id: '123',
@@ -81,19 +80,17 @@ export class VideosComponent implements OnInit {
     }
   ];
 
-  isChart$ = new Observable();
-  subscription = new Subscription();
-
   constructor(
     private router: Router,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
 
   openChartByVideo(id: string) {
-    this.router.navigate(['/video', id])
+    this.router.navigate(['/video', id]);
   }
 
 }
