@@ -26,8 +26,9 @@ import {VideoInfoComponent} from './video-info/video-info.component';
 import {ChartsModule} from 'ng2-charts';
 import {StatChartComponent} from './stat-chart/stat-chart.component';
 import {VideosComponent} from './videos/video.component';
-import { HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {YoutubeService} from './services/youtube.service';
+import {TokenInterceptor} from "./interceptors/token.interceptor";
 
 @NgModule({
   declarations: [
@@ -61,7 +62,12 @@ import {YoutubeService} from './services/youtube.service';
   ],
   providers: [
     AuthGuard,
-    YoutubeService
+    YoutubeService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
   ],
   entryComponents: [
     CreateDashboardDialogComponent
