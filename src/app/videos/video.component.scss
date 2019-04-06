@@ -2,11 +2,10 @@
   margin: 10px;
   cursor: pointer;
   transition: box-shadow 200ms ease-in-out;
+  width: 277px;
 }
 
 img {
-  max-width: 309px;
-  max-height: 640px;
 }
 
 .content {
@@ -25,17 +24,17 @@ img {
   flex-direction: column;
 
   .title {
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 550;
   }
 
   .views {
-    font-size: 18px;
+    font-size: 16px;
     color: grey;
   }
 
   .date {
-    font-size: 18px;
+    font-size: 16px;
     color: grey;
   }
 }

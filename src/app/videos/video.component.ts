@@ -19,10 +19,10 @@ export class VideosComponent implements OnInit {
       commentCount: 145,
       dislikeCount: 168,
       likeCount: 190,
-      viewCount: 19340,
+      viewCount: 24363672,
       publishedAt: new Date(),
-      title: 'Name 1',
-      thumbnail: 'https://bipbap.ru/wp-content/uploads/2017/10/0_8eb56_842bba74_XL-640x400.jpg'
+      title: 'Star Wars: The Force Awakens Official Teaser',
+      thumbnail: 'http://i3.ytimg.com/vi/erLk59H86ww/maxresdefault.jpg'
     },
     {
       id: '234',
