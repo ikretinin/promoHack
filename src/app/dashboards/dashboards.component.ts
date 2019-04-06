@@ -29,7 +29,8 @@ export class DashboardsComponent implements OnInit {
     
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      var data = result;
+      console.log(result);
+
     });
   }
 

@@ -27,6 +27,7 @@ export class CreateDashboardDialogComponent implements OnInit {
 
   applyFilters(event) {
     console.log(event);
+    console.log(this.dashboard);
   }
 }
 
