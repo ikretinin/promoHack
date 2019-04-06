@@ -12,12 +12,12 @@ export class YoutubeService {
     private http: HttpClient
   ) {}
 
-  createTaskForChannel(channel: CreateDashboardModel): Observable<any> {
+  createChannel(channel: CreateDashboardModel): Observable<any> {
     return this.http.post<any>(`${environment.API_ENDPOINT}/createChannel`, channel);
   }
 
-  getChannels(): Observable<ChannelDasboardModel[]> {
-    return this.http.get<ChannelDasboardModel[]>(`${environment.API_ENDPOINT}/getChannels`);
+  getChannels(userId: string): Observable<ChannelDasboardModel[]> {
+    return this.http.get<ChannelDasboardModel[]>(`${environment.API_ENDPOINT}/getChannels?userId=${userId}`);
   }
 
   getVideosByChannelId(channelId: string): Observable<VideoDashboardModel[]> {
