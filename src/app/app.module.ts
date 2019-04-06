@@ -14,7 +14,8 @@ import {MatButtonModule,
         MatSliderModule,
         MatCheckboxModule,
         MatSlideToggleModule,
-        MatCardModule
+        MatCardModule,
+        MatProgressBarModule
 } from '@angular/material';
 import {AuthGuard} from './guards/auth.guard';
 import {LoginComponent} from './login/login.component';
@@ -55,7 +56,8 @@ import {YoutubeService} from './services/youtube.service';
     MatSlideToggleModule,
     ChartsModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressBarModule
   ],
   providers: [
     AuthGuard,
