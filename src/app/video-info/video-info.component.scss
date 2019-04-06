@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 .content {
   display: flex;
   flex-direction: row;
@@ -12,7 +14,7 @@
 }
 
 .chart {
-  width: 1080px;
+  width: 950px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,8 +23,8 @@
 
 .mark-sign {
   font-family: sans-serif;
-  font-size: 215px;
-  color: red;
+  font-size: 130px;
+  color: $accent-color;
 }
 
 .mark-title {
@@ -74,4 +76,19 @@
 
 .mat-card {
   margin: 10px;
+}
+
+.progress {
+    height: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.user-portrait {
+  display: inline-block;
+  width: 150px;
+}
+
+.user-portrait-info {
+  display: inline-block;
 }

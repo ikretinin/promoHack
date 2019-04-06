@@ -3,7 +3,7 @@
 
 $primary: mat-palette($mat-red);
 $accent: mat-palette($mat-red, 500, 900, 300);
-$warn: mat-palette($mat-red);
+$warn: mat-palette($mat-green);
 
 $promo-theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($promo-theme);

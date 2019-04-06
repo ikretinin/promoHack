@@ -1,15 +1,15 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import 'theme.scss';
 
+$primary-color: mat-color($primary);
+$accent-color: #4caf50;
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: #f4f4f4;
 }
 
-/deep/ .mat-toolbar.mat-primary {
-  background: #000 !important;
-}
 
 .mat-dialog-content {
   max-height: unset !important;

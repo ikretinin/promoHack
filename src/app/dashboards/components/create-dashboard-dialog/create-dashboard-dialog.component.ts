@@ -21,13 +21,12 @@ export class CreateDashboardDialogComponent implements OnInit {
       isLikes: null,
       isViews: null,
       isComments: null,
-      isCommentsMood: null
+      isCommentsMood: null,
+      userId: null
     };
   }
 
   applyFilters(event) {
-    console.log(event);
-    console.log(this.dashboard);
   }
 }
 
