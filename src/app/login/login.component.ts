@@ -35,14 +35,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe(qp => {
       if (qp['returnUrl']) {
-        let returnUrlParams = this.getQueryParams(qp['returnUrl'])
+        const returnUrlParams = this.getQueryParams(qp['returnUrl']);
         this.accessToken = returnUrlParams.access_token;
         this.http.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${this.accessToken}`)
           .subscribe(m => {
-            console.log(m);
-            localStorage.setItem('currentUser', `${JSON.stringify({login: m.id})}`);
-            localStorage.setItem('accessToken', `${JSON.stringify({login: this.accessToken})}`);
-            localStorage.setItem('userName', `${JSON.stringify({login: m.name})}`);
+            localStorage.setItem('currentUser', `${m['id']}`);
+            localStorage.setItem('accessToken', `${this.accessToken}`);
+            localStorage.setItem('userName', `${m['name']}`);
             this.router.navigate(['/channels'], {replaceUrl: true});
           });
       }
