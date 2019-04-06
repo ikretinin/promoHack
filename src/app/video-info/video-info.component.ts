@@ -7,5 +7,6 @@ import {Component, OnInit} from '@angular/core';
 })
 export class VideoInfoComponent implements OnInit {
   ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
 }

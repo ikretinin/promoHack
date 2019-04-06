@@ -1,3 +1,7 @@
 .mat-checkbox {
     display: block;
+
+    /deep/ .mat-checkbox-layout .mat-checkbox-label {
+        white-space: pre-wrap !important;
+    }
 }
