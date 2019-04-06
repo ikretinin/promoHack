@@ -1,0 +1,32 @@
+.dashboards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.dashboard {
+    width: 240px;
+    height: 160px;
+    border: 2px solid red;
+    border-radius: 8px;
+    margin: 30px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+  transition: box-shadow 200ms ease-in-out;
+
+}
+
+i {
+    font-size: 50px;
+}
+
+.dashboard:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+

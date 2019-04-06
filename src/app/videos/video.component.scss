@@ -1,0 +1,49 @@
+.card {
+  margin: 20px;
+  cursor: pointer;
+  transition: box-shadow 200ms ease-in-out;
+}
+
+img {
+  max-width: 360px;
+  max-height: 640px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .views {
+    font-size: 18px;
+    color: grey;
+  }
+
+  .date {
+    font-size: 18px;
+    color: grey;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 600;
+}
