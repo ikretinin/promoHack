@@ -25,6 +25,12 @@ export class YoutubeService {
   }
 
   updateUser(user: any): Observable<any> {
+    const currentUser = {
+      token: user.accessToken,
+      name: user.name,
+      link: user.link,
+      picture: user.picture
+    };
     return this.http.post<any>(`${environment.API_ENDPOINT}/updateUser`, JSON.stringify(user));
   }
 }

@@ -28,10 +28,6 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/channels'], {replaceUrl: true});
   }
 
-  isLogined() {
-    return localStorage.getItem('currentUser');
-  }
-
   signInGoogle() {
     window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=476964635324-peqttc9i3rmisb3p1kr0kpdn0ktdd7c9.apps.googleusercontent.com&redirect_uri=http://localhost:4200/channels&response_type=token&scope=https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/userinfo.profile';
   }
@@ -43,12 +39,20 @@ export class LoginComponent implements OnInit {
         this.accessToken = returnUrlParams.access_token;
         this.http.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${this.accessToken}`)
           .subscribe(m => {
-            localStorage.setItem('currentUser', `${m['id']}`);
-            localStorage.setItem('accessToken', `${this.accessToken}`);
-            localStorage.setItem('userName', `${m['name']}`);
-            this.service.updateUser({...m, accessToken: this.accessToken}).subscribe(u => {this.router.navigate(['/channels'], {replaceUrl: true});});
+            this.setLocalStorage(m['id'], m['name']);
+            this.service.updateUser({...m, accessToken: this.accessToken})
+              .subscribe(() => {
+                this.router.navigate(['/channels'], {replaceUrl: true});
+              });
           });
-  }});
+      }
+    });
+  }
+
+  setLocalStorage(id: string, name: string) {
+    localStorage.setItem('currentUser', `${id}`);
+    localStorage.setItem('accessToken', `${this.accessToken}`);
+    localStorage.setItem('userName', `${name}`);
   }
 
   getQueryParams(locationSearch: string): any {
