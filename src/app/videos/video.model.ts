@@ -1,5 +1,5 @@
 export interface VideoDashboardModel {
-  id: string;
+  videoId: string;
   publishedAt: Date;
   title: string;
   thumbnail: string;

@@ -27,6 +27,7 @@ export class VideosComponent implements OnInit {
       console.log(this.videos);
     });
     this.service.getChannelById(this.route.snapshot.params['id']).subscribe(x => console.log(x));
+    this.service.getVideoById('Dn6cxkdEL2A').subscribe(x => console.log(x));
   }
 
   openChartByVideo(id: string) {

@@ -2,20 +2,20 @@
   <mat-icon color="primary" style="margin-right: 10px;">warning</mat-icon>
   Для просмотра детализации воспользуйтесь полной версией.
 </mat-card>
-<mat-card class="header">
-  <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=erLk59H86ww">
-    <img class="thumbnail-image" src="http://i3.ytimg.com/vi/erLk59H86ww/maxresdefault.jpg">
+<mat-card class="header" *ngIf="videoInfo">
+  <a target="_blank" rel="noopener noreferrer" href="{{getVideoLink()}}">
+    <img class="thumbnail-image" src="{{videoInfo[0]?.thumbnail || 'https://pbs.twimg.com/profile_images/600060188872155136/st4Sp6Aw_400x400.jpg'}}">
   </a>
   <div class="header-info">
-    <p class="video-name">Star Wars: The Force Awakens Official Teaser</p>
-    <div class="video-views">24 363 672 просмотра</div>
+    <p class="video-name">{{videoInfo[0]?.title}}</p>
+    <div class="video-views">{{videoInfo[0]?.viewCount}} просмотров</div>
     <div class="video-marks">
       <i class="material-icons">thumb_up</i>
-      155 ТЫС.
+      {{videoInfo[0]?.likeCount}}
     </div>
     <div class="video-marks">
       <i class="material-icons">thumb_down</i>
-      4,9 ТЫС.
+      {{videoInfo[0]?.dislikeCount}}
     </div>
   </div>
 </mat-card>

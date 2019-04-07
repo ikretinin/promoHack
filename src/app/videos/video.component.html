@@ -8,7 +8,7 @@
   </div>
 </mat-card>
 <div class="content">
-  <mat-card class="card" *ngFor="let video of videos" (click)="openChartByVideo(video?.id)">
+  <mat-card class="card" *ngFor="let video of videos" (click)="openChartByVideo(video?.videoId)">
     <img mat-card-image src="{{video?.thumbnail || 'https://pbs.twimg.com/profile_images/600060188872155136/st4Sp6Aw_400x400.jpg'}}" alt="Photo">
     <mat-card-content class="description">
       <span class="title">{{video?.title}}</span>
