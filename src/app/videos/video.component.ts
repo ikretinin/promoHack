@@ -3,6 +3,7 @@ import {VideoDashboardModel} from './video.model';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Observable, Subscription} from 'rxjs';
 import {map, subscribeOn} from 'rxjs/operators';
+import {YoutubeService} from '../services/youtube.service';
 
 @Component({
   selector: 'app-videos',
@@ -11,6 +12,7 @@ import {map, subscribeOn} from 'rxjs/operators';
 })
 export class VideosComponent implements OnInit {
 
+  videosById: VideoDashboardModel[];
   videos: VideoDashboardModel[] = [
     {
       id: '123',
@@ -82,11 +84,16 @@ export class VideosComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private service: YoutubeService
   ) {}
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
+    this.service.getAllChannelVideos(this.route.snapshot.params['id']).subscribe(x => {
+      this.videosById = x;
+      console.log(this.videosById);
+    });
   }
 
   openChartByVideo(id: string) {

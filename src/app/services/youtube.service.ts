@@ -20,8 +20,8 @@ export class YoutubeService {
     return this.http.get<ChannelDasboardModel[]>(`${environment.API_ENDPOINT}/getChannels?userId=${userId}`);
   }
 
-  getVideosByChannelId(channelId: string): Observable<VideoDashboardModel[]> {
-    return this.http.get<VideoDashboardModel[]>(`${environment.API_ENDPOINT}/getVideosByChannelId?id=${channelId}`);
+  getAllChannelVideos(channelId: string): Observable<VideoDashboardModel[]> {
+    return this.http.get<VideoDashboardModel[]>(`${environment.API_ENDPOINT}/getAllChannelVideos?id=${channelId}`);
   }
 
   updateUser(user: any): Observable<any> {
