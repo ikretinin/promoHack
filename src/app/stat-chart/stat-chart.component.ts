@@ -10,9 +10,10 @@ import * as pluginAnnotations from 'chartjs-plugin-annotation';
 })
 export class StatChartComponent implements OnInit {
   public lineChartsData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'First' },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Second' },
-    { data: [180, 480, 770, 90, 1000, 270, 400], label: 'Third', yAxisID: 'y-axis-1' }
+    { data: [40, 59, 80, 81, 93, 126, 234], label: 'Likes' },
+    { data: [28, 48, 50, 53, 86, 90, 95], label: 'Comments' },
+    { data: [180, 480, 770, 853, 1000, 1237, 1378], label: 'Views', yAxisID: 'y-axis-1' },
+    { data: [40, 48, 37, 63, 72, 32, 35, 53], label: 'Sentiment'}
   ];
 
   public lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
@@ -78,7 +79,13 @@ export class StatChartComponent implements OnInit {
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    }
+    },
+    {
+      backgroundColor: 'rgba(217,217,217,0.4)',
+      borderColor: 'grey',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(148,159,177,0.8)'}
   ];
 
   public lineChartType = 'line';
