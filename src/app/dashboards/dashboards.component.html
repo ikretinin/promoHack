@@ -7,14 +7,14 @@
   <ng-container  *ngIf="channels">
     <mat-card class="dashboard" *ngFor="let channel of channels" (click)="toVideo(channel._id)">
       <div class="card">
-        <img src="{{channel.thumbnail || 'https://pbs.twimg.com/profile_images/600060188872155136/st4Sp6Aw_400x400.jpg'}}">
+        <img src="{{channel?.thumbnail || 'https://pbs.twimg.com/profile_images/600060188872155136/st4Sp6Aw_400x400.jpg'}}">
         <div class="description">
-          <span class="title">{{channel.title}}</span>
+          <span class="title">{{channel?.title}}</span>
           <span class="count">
-            <mat-icon>local_movies</mat-icon>{{channel.videoCount}}
+            <mat-icon>local_movies</mat-icon>{{channel?.videoCount}}
           </span>
           <span class="count">
-            <mat-icon>people</mat-icon>{{channel.subscriberCount}}
+            <mat-icon>people</mat-icon>{{channel?.subscriberCount}}
           </span>
         </div>
       </div>
