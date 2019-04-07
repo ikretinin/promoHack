@@ -4,7 +4,8 @@
 
 export const environment = {
   API_ENDPOINT: 'http://127.0.0.1:1880',
-  production: false
+  production: false,
+  returnUrl: 'http://localhost:4200/channels'
 };
 
 /*

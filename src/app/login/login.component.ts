@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {HttpClient} from "@angular/common/http";
 import {YoutubeService} from "../services/youtube.service";
 import {any} from "codelyzer/util/function";
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -29,7 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   signInGoogle() {
-    window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=476964635324-peqttc9i3rmisb3p1kr0kpdn0ktdd7c9.apps.googleusercontent.com&redirect_uri=http://localhost:4200/channels&response_type=token&scope=https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/userinfo.profile';
+    window.location.href = `https://accounts.google.com/o/oauth2/v2/auth?client_id=476964635324-peqttc9i3rmisb3p1kr0kpdn0ktdd7c9.apps.googleusercontent.com&redirect_uri=${environment.returnUrl}&response_type=token&scope=https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/youtube.force-ssl`;
   }
 
   ngOnInit(): void {

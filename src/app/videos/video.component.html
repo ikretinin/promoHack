@@ -1,10 +1,11 @@
-<mat-card class="header">
-  <a href="https://www.youtube.com/watch?v=erLk59H86ww">
-    <img class="thumbnail-image" src="http://i3.ytimg.com/vi/erLk59H86ww/maxresdefault.jpg">
+<script src="../../environments/environment.ts"></script>
+<mat-card class="header" *ngIf="channel">
+  <a href="{{channel[0]?.link}}">
+    <img class="thumbnail-image" src="{{channel[0].thumbnail || 'https://pbs.twimg.com/profile_images/600060188872155136/st4Sp6Aw_400x400.jpg'}}">
   </a>
   <div class="header-info">
-    <p class="channel-name">Star Wars Channel</p>
-    <div class="channel-followers">24 363 672 followers</div>
+    <p class="channel-name">{{channel[0]?.title}}</p>
+    <div class="channel-followers">{{channel[0]?.subscriberCount}} followers</div>
   </div>
 </mat-card>
 <div class="content">
@@ -12,8 +13,8 @@
     <img mat-card-image src="{{video?.thumbnail || 'https://pbs.twimg.com/profile_images/600060188872155136/st4Sp6Aw_400x400.jpg'}}" alt="Photo">
     <mat-card-content class="description">
       <span class="title">{{video?.title}}</span>
-      <span class="views">Просмотров: {{video?.viewCount}}</span>
-      <span class="date">{{video?.publishedAt ? (video.publishedAt | date:'dd.MM.yyyy') : ''}}</span>
+      <span class="views">Views: {{video?.viewCount}}</span>
+      <span class="date">Date of publication: {{video?.publishedAt ? (video.publishedAt | date:'dd.MM.yyyy') : ''}}</span>
     </mat-card-content>
   </mat-card>
 </div>

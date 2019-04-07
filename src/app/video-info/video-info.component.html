@@ -1,6 +1,6 @@
 <mat-card class="warning">
   <mat-icon color="primary" style="margin-right: 10px;">warning</mat-icon>
-  Для просмотра детализации воспользуйтесь полной версией.
+  To view the details, use the desktop version.
 </mat-card>
 <mat-card class="header" *ngIf="videoInfo">
   <a target="_blank" rel="noopener noreferrer" href="{{getVideoLink()}}">
@@ -8,7 +8,7 @@
   </a>
   <div class="header-info">
     <p class="video-name">{{videoInfo[0]?.title}}</p>
-    <div class="video-views">{{videoInfo[0]?.viewCount}} просмотров</div>
+    <div class="video-views">{{videoInfo[0]?.viewCount}} views</div>
     <div class="video-marks">
       <i class="material-icons">thumb_up</i>
       {{videoInfo[0]?.likeCount}}

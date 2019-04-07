@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {VideoDashboardModel} from './video.model';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Observable, Subscription} from 'rxjs';
-import {map, subscribeOn} from 'rxjs/operators';
 import {YoutubeService} from '../services/youtube.service';
+import {ChannelDasboardModel} from '../dashboards/models/channel.model';
 
 @Component({
   selector: 'app-videos',
@@ -13,6 +12,7 @@ import {YoutubeService} from '../services/youtube.service';
 export class VideosComponent implements OnInit {
 
   videos: VideoDashboardModel[];
+  channel: ChannelDasboardModel[];
 
   constructor(
     private router: Router,
@@ -26,8 +26,7 @@ export class VideosComponent implements OnInit {
       this.videos = x;
       console.log(this.videos);
     });
-    this.service.getChannelById(this.route.snapshot.params['id']).subscribe(x => console.log(x));
-    this.service.getVideoById('Dn6cxkdEL2A').subscribe(x => console.log(x));
+    this.service.getChannelById(this.route.snapshot.params['id']).subscribe(x => this.channel = x);
   }
 
   openChartByVideo(id: string) {
