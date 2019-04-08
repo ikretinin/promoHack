@@ -5,12 +5,12 @@
             <input matInput [(ngModel)]="dashboard.link" placeholder="Link" name="link" autocomplete="off">
         </mat-form-field>
         <div>
-            Период обработки
+            Processing period
             <mat-slider thumbLabel [(ngModel)]="dashboard.processingTime" min="1" max="30" name="processingTime"></mat-slider>
             {{dashboard.processingTime}} days
         </div>
         <div>
-            Частота обновления
+            Update frequency
             <mat-slider thumbLabel [(ngModel)]="dashboard.updatePeriod" min="1" max="24" name="updatePeriod"></mat-slider>
             {{dashboard.updatePeriod}} hours
         </div>
